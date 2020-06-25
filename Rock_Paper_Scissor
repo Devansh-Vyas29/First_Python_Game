@@ -1,0 +1,38 @@
+import random
+
+def __init__(self,com,user):
+    self.user=user
+    self.com=com
+
+def result(user,com):
+    if(user == com):
+        print("Tie!!")
+    elif(user == 'Rock' ):
+        if(com == 'Paper'):
+            print("Com Wins!")
+        elif(com == 'Scissor'):
+            print("User Wins!")
+    elif(user == 'Paper'):
+        if(com == 'Rock'):
+            print("User wins")
+        elif(com == 'Scissor'):
+            print("com wins")
+    elif(user == 'scissor'):
+        if(com == 'Rock'):
+            print("com wins")
+        elif(com == 'Paper'):
+            print("User wins")
+    else:
+        print("invalid")
+
+
+i=0
+while i in range(5):
+    list = ['Rock','Paper','scissor']
+    user = input("Enter Rock/Paper/Scissor: ")
+
+    com = random.choice(list)
+
+    print("Computer: ",com)
+    i+=1
+    result(user,com)
